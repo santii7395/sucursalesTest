@@ -1,12 +1,8 @@
 const express = require('express')
 const app = express();
 const bodyParser = require('body-parser');
-const routes = require('./routes/index.route');
-const mongoConnection = require('./bbddConnection/mongoConnection');
-
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// });
+const routes = require('./src/routes/index.route');
+const mongoConnection = require('./src/bbddConnection/mongoConnection');
 
 mongoConnection.connect((err) => {
     if (err){
